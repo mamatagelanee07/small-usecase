@@ -1,0 +1,26 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.dagger = "2.25.3"
+versions.support = "1.0.0"
+versions.timber = "4.7.1"
+
+def deps = [:]
+
+def support = [:]
+support.annotations = "androidx.annotation:annotation:$versions.support"
+
+deps.support = support
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+
+deps.dagger = dagger
+
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"
+
+ext.deps = deps
