@@ -1,6 +1,7 @@
 package com.andigeeky.mvpapp
 
 import android.app.Application
+import com.andigeeky.mvpapp.di.AppInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import timber.log.Timber
@@ -15,6 +16,7 @@ class MVPApplication : Application(), HasAndroidInjector {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
+        AppInjector.init(this)
     }
 
     override fun androidInjector()= dispatchingAndroidInjector
