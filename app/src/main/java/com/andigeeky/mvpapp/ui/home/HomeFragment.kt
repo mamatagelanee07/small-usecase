@@ -16,6 +16,6 @@ class HomeFragment : Fragment(), Injectable {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.activity_main, null)
+        return inflater.inflate(R.layout.fragment_home, null)
     }
 }
