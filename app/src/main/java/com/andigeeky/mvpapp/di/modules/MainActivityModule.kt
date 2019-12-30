@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.di
+package com.andigeeky.mvpapp.di.modules
 
 
 import com.andigeeky.mvpapp.MainActivity

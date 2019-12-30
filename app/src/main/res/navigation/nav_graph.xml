@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/home">
+    app:startDestination="@id/lines">
 
     <fragment
-        android:id="@+id/home"
-        android:name="com.andigeeky.mvpapp.ui.home.HomeFragment"
+        android:id="@+id/lines"
+        android:name="com.andigeeky.mvpapp.ui.lines.LinesFragment"
         tools:layout = "@layout/fragment_home"
         android:label="Home" />
 </navigation>

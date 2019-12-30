@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import com.andigeeky.mvpapp.MVPApplication
+import com.andigeeky.mvpapp.TFLApplication
 import dagger.android.AndroidInjection
 import dagger.android.HasAndroidInjector
 import dagger.android.support.AndroidSupportInjection
@@ -15,15 +15,15 @@ import dagger.android.support.AndroidSupportInjection
  * Helper class to automatically inject fragments if they implement [Injectable].
  */
 object AppInjector {
-    fun init(mvpApplication: MVPApplication) {
+    fun init(TFLApplication: TFLApplication) {
 
         DaggerAppComponent
             .builder()
-            .application(mvpApplication)
+            .application(TFLApplication)
             .build()
-            .inject(mvpApplication)
+            .inject(TFLApplication)
 
-        mvpApplication
+        TFLApplication
             .registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
                 override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
                     handleActivity(activity)

@@ -1,6 +1,6 @@
-package com.andigeeky.mvpapp.di
+package com.andigeeky.mvpapp.di.modules
 
-import com.andigeeky.mvpapp.ui.home.HomeFragment
+import com.andigeeky.mvpapp.ui.lines.LinesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -8,5 +8,5 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class FragmentBuildersModule {
     @ContributesAndroidInjector
-    abstract fun contributeHomeFragment(): HomeFragment
+    abstract fun contributeHomeFragment(): LinesFragment
 }
