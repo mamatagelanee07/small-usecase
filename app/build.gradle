@@ -39,6 +39,7 @@ dependencies {
     implementation deps.kotlin.stdlib
     implementation deps.support.core_ktx
     implementation deps.support.app_compat
+    implementation deps.support.cardview
     implementation deps.constraint_layout
 
     implementation deps.navigation.fragment_ktx
@@ -47,6 +48,7 @@ dependencies {
     implementation deps.lifecycle.extensions
     implementation deps.lifecycle.java8
 
+    implementation deps.glide.runtime
 
     implementation deps.retrofit.runtime
     implementation deps.retrofit.gson
