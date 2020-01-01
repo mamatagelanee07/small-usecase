@@ -30,7 +30,7 @@ class LinesFragment : Fragment(), Injectable {
     @Inject
     lateinit var appExecutors: AppExecutors
 
-    var dataBindingComponent: DataBindingComponent = FragmentDataBindingComponent(this)
+    private var dataBindingComponent: DataBindingComponent = FragmentDataBindingComponent(this)
     private var adapter by autoCleared<LinesAdapter>()
     private var binding by autoCleared<FragmentHomeBinding>()
 

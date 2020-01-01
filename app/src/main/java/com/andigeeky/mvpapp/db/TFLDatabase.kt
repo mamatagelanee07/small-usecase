@@ -6,14 +6,14 @@ import androidx.room.RoomDatabase
 import com.andigeeky.mvpapp.lines.vo.Line
 
 /**
- * Main database description.
+ * TFL database for Lines
  */
 @Database(
     entities = [Line::class],
     version = 1,
     exportSchema = false
 )
-abstract class TFLAppDb : RoomDatabase() {
+abstract class TFLDatabase : RoomDatabase() {
 
     abstract fun linesDao(): LinesDao
 }

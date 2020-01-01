@@ -13,9 +13,7 @@ class TFLApplication : Application(), HasAndroidInjector {
 
     override fun onCreate() {
         super.onCreate()
-        if (BuildConfig.DEBUG) {
-            Timber.plant(Timber.DebugTree())
-        }
+        if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
         AppInjector.init(this)
     }
 

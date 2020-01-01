@@ -16,7 +16,7 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(LinesViewModel::class)
-    abstract fun bindHomeViewModel(linesViewModel: LinesViewModel): ViewModel
+    abstract fun bindLinesViewModel(linesViewModel: LinesViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: TFLViewModelFactory): ViewModelProvider.Factory

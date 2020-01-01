@@ -3,7 +3,7 @@ package com.andigeeky.mvpapp.di
 import android.app.Application
 import com.andigeeky.mvpapp.TFLApplication
 import com.andigeeky.mvpapp.di.modules.AppModule
-import com.andigeeky.mvpapp.di.modules.MainActivityModule
+import com.andigeeky.mvpapp.di.modules.ActivityBuilddersModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [AndroidInjectionModule::class,
-        MainActivityModule::class,
+        ActivityBuilddersModule::class,
         AppModule::class]
 )
 interface AppComponent {
