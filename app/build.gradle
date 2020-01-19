@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.andigeeky.mvpapp"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -65,6 +65,10 @@ dependencies {
     implementation deps.timber
 
     testImplementation deps.test.junit
+    testImplementation deps.coroutines.test
+    testImplementation deps.arch_core.testing
+    testImplementation deps.mock_web_server
+
     androidTestImplementation deps.test.junitX
     androidTestImplementation deps.test.espresso
 }
