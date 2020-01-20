@@ -48,15 +48,17 @@ class TFLServiceTest {
 
     private fun enqueueResponse(fileName: String, headers: Map<String, String> = emptyMap()) {
         val inputStream = javaClass.classLoader
-            .getResourceAsStream("api-response/$fileName")
-        val source = Okio.buffer(Okio.source(inputStream))
+            ?.getResourceAsStream("api-response/$fileName")
+        val source = inputStream?.let {
+            Okio.buffer(Okio.source(it))
+        }
         val mockResponse = MockResponse()
         for ((key, value) in headers) {
             mockResponse.addHeader(key, value)
         }
         mockWebServer.enqueue(
             mockResponse
-                .setBody(source.readString(Charsets.UTF_8))
+                .setBody(source?.readString(Charsets.UTF_8))
         )
     }
 
