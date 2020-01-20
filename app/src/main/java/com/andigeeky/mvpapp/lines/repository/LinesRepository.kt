@@ -6,6 +6,7 @@ import com.andigeeky.mvpapp.api.TFLService
 import com.andigeeky.mvpapp.api.networkBoundResource
 import com.andigeeky.mvpapp.db.LinesDao
 import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.testing.OpenForTesting
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -13,6 +14,7 @@ import javax.inject.Singleton
  * Repository that handles Line instances.
  *
  */
+@OpenForTesting
 @Singleton
 class LinesRepository @Inject constructor(
     private val linesDao: LinesDao,

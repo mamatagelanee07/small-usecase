@@ -6,11 +6,13 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.testing.OpenForTesting
 
 /**
  * Interface for database access for User related operations.
  */
 @Dao
+@OpenForTesting
 interface LinesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(line: Line)

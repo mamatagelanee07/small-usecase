@@ -5,7 +5,7 @@ apply plugin: deps.plugins.kotlin
 apply plugin: deps.plugins.safeargs
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.andigeeky.mvpapp"
         minSdkVersion 19
@@ -28,11 +28,11 @@ android {
     dataBinding {
         enabled = true
     }
-
     compileOptions {
-        sourceCompatibility = '1.8'
-        targetCompatibility = '1.8'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+    testOptions.unitTests.includeAndroidResources = true
 }
 
 dependencies {
@@ -67,7 +67,12 @@ dependencies {
     testImplementation deps.test.junit
     testImplementation deps.coroutines.test
     testImplementation deps.arch_core.testing
+    testImplementation deps.atsl.runner
+    testImplementation deps.atsl.rules
+    testImplementation deps.atsl.ext_junit
     testImplementation deps.mock_web_server
+    testImplementation deps.mockito.core
+    testImplementation deps.robolectric
 
     androidTestImplementation deps.test.junitX
     androidTestImplementation deps.test.espresso

@@ -16,17 +16,23 @@ versions.dexmaker = "2.2.0"
 versions.constraint_layout = "2.0.0-alpha2"
 versions.okhttp_logging_interceptor = "3.9.0"
 versions.retrofit = "2.7.0"
-versions.mockwebserver = "3.8.1"
 versions.rxjava2 = "2.1.3"
 versions.rx_android = "2.0.1"
 versions.hamcrest = "1.3"
 versions.junit = "4.12"
 versions.junitX = "1.1.0"
 versions.android_gradle_plugin = '3.5.3'
-versions.robolectric = "4.4-SNAPSHOT"
 versions.espresso = "3.1.1"
 versions.navigation = "2.1.0"
 versions.glide = "4.8.0"
+versions.atsl_rules = "1.1.1"
+versions.atsl_runner = "1.1.1"
+versions.atsl_junit = "1.1.0"
+versions.mockito = "2.25.0"
+versions.mockito_all = "1.10.19"
+versions.mockito_android = "2.25.0"
+versions.robolectric = "4.4-SNAPSHOT"
+versions.mockwebserver = "3.8.1"
 
 def deps = [:]
 
@@ -81,6 +87,17 @@ test.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_g
 test.robolectric = "org.robolectric:robolectric:$versions.robolectric"
 test.espresso = "androidx.test.espresso:espresso-core:$versions.espresso"
 
+def atsl = [:]
+atsl.runner = "androidx.test:runner:$versions.atsl_runner"
+atsl.rules = "androidx.test:rules:$versions.atsl_runner"
+atsl.ext_junit = "androidx.test.ext:junit:$versions.atsl_junit"
+
+def mockito = [:]
+mockito.core = "org.mockito:mockito-core:$versions.mockito"
+mockito.all = "org.mockito:mockito-all:$versions.mockito_all"
+mockito.android = "org.mockito:mockito-android:$versions.mockito_android"
+
+
 def lifecycle = [:]
 lifecycle.runtime = "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle"
 lifecycle.runtime_ktx = "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle"
@@ -118,6 +135,7 @@ retrofit.mock = "com.squareup.retrofit2:retrofit-mock:$versions.retrofit"
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.okhttp_logging_interceptor = "com.squareup.okhttp3:logging-interceptor:${versions.okhttp_logging_interceptor}"
+deps.robolectric = "org.robolectric:robolectric:$versions.robolectric"
 
 def plugins = [:]
 plugins.android = "com.android.application"
@@ -131,6 +149,8 @@ deps.coroutines = coroutines
 deps.support = support
 deps.dagger = dagger
 deps.test = test
+deps.atsl = atsl
+deps.mockito = mockito
 deps.navigation = navigation
 deps.lifecycle = lifecycle
 deps.arch_core = arch_core
