@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.andigeeky.mvpapp.R
 import com.andigeeky.mvpapp.databinding.FragmentHomeBinding
 import com.andigeeky.mvpapp.di.Injectable
+import com.andigeeky.mvpapp.testing.OpenForTesting
 import com.andigeeky.mvpapp.ui.common.AppExecutors
 import com.andigeeky.mvpapp.ui.common.FragmentDataBindingComponent
 import com.andigeeky.mvpapp.util.autoCleared
@@ -23,6 +24,7 @@ import javax.inject.Inject
 /**
  * The UI Controller for displaying all Lines information of TFL.
  */
+@OpenForTesting
 class LinesFragment : Fragment(), Injectable {
 
     @Inject
@@ -30,7 +32,7 @@ class LinesFragment : Fragment(), Injectable {
     @Inject
     lateinit var appExecutors: AppExecutors
 
-    private var dataBindingComponent: DataBindingComponent = FragmentDataBindingComponent(this)
+    var dataBindingComponent: DataBindingComponent = FragmentDataBindingComponent(this)
     private var adapter by autoCleared<LinesAdapter>()
     private var binding by autoCleared<FragmentHomeBinding>()
 
@@ -66,5 +68,8 @@ class LinesFragment : Fragment(), Injectable {
         })
     }
 
+    /**
+     * Created to be able to override in tests
+     */
     fun navController() = findNavController()
 }

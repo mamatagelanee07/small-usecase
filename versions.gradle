@@ -85,7 +85,11 @@ test.junit = "junit:junit:$versions.junit"
 test.junitX = "androidx.test.ext:junit:$versions.junitX"
 test.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 test.robolectric = "org.robolectric:robolectric:$versions.robolectric"
-test.espresso = "androidx.test.espresso:espresso-core:$versions.espresso"
+
+def espresso = [:]
+espresso.core = "androidx.test.espresso:espresso-core:$versions.espresso"
+espresso.contrib = "androidx.test.espresso:espresso-contrib:$versions.espresso"
+espresso.intents = "androidx.test.espresso:espresso-intents:$versions.espresso"
 
 def atsl = [:]
 atsl.runner = "androidx.test:runner:$versions.atsl_runner"
@@ -158,5 +162,6 @@ deps.room = room
 deps.plugins = plugins
 deps.retrofit = retrofit
 deps.glide = glide
+deps.espresso = espresso
 
 ext.deps = deps

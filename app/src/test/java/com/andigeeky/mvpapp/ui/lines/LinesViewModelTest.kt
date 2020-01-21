@@ -6,8 +6,8 @@ import androidx.lifecycle.Observer
 import com.andigeeky.mvpapp.api.Resource
 import com.andigeeky.mvpapp.lines.repository.LinesRepository
 import com.andigeeky.mvpapp.lines.vo.Line
-import com.andigeeky.mvpapp.utils.mock
-import com.andigeeky.mvpapp.utils.resourcepools.TestUtil
+import com.andigeeky.mvpapp.util.mock
+import com.andigeeky.mvpapp.util.TestUtil
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -37,7 +37,8 @@ class LinesViewModelTest {
     fun `test sending data to UI`() {
         val foo = MutableLiveData<Resource<List<Line>>>()
         `when`(linesRepository.loadLines()).thenReturn(foo)
-        val observer = mock<Observer<Resource<List<Line>>>>()
+        val observer =
+            mock<Observer<Resource<List<Line>>>>()
 
         linesViewModel.getLines().observeForever(observer)
         verify(observer, never()).onChanged(any())

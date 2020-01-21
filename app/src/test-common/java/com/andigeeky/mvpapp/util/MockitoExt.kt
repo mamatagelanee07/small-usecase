@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.utils
+package com.andigeeky.mvpapp.util
 
 import org.mockito.ArgumentCaptor
 import org.mockito.Mockito

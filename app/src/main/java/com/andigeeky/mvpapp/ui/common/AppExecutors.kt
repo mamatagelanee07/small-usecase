@@ -15,9 +15,9 @@ import kotlin.coroutines.EmptyCoroutineContext
  */
 @Singleton
 open class AppExecutors(
-    val io: DispatcherExecutor,
-    val default : DispatcherExecutor,
-    val mainThread: DispatcherExecutor
+    val io: Executor,
+    val default : Executor,
+    val mainThread: Executor
 ) {
     @Inject
     constructor() : this(

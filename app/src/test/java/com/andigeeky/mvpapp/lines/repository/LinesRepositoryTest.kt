@@ -11,8 +11,8 @@ import com.andigeeky.mvpapp.api.TFLService
 import com.andigeeky.mvpapp.db.LinesDao
 import com.andigeeky.mvpapp.db.TFLDatabase
 import com.andigeeky.mvpapp.utils.CoroutineTestBase
-import com.andigeeky.mvpapp.utils.mock
-import com.andigeeky.mvpapp.utils.resourcepools.TestUtil
+import com.andigeeky.mvpapp.util.mock
+import com.andigeeky.mvpapp.util.TestUtil
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before

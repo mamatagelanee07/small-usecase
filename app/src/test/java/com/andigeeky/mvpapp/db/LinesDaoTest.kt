@@ -4,8 +4,8 @@ import android.os.Build
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.andigeeky.mvpapp.lines.vo.Line
-import com.andigeeky.mvpapp.utils.mock
-import com.andigeeky.mvpapp.utils.resourcepools.TestUtil
+import com.andigeeky.mvpapp.util.mock
+import com.andigeeky.mvpapp.util.TestUtil
 import junit.framework.Assert.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
@@ -55,7 +55,8 @@ class LinesDaoTest : DbTest() {
     @Test
     fun `test inserting list of line`() {
         runBlockingTest {
-            val observer1 = mock<Observer<List<Line>>>()
+            val observer1 =
+                mock<Observer<List<Line>>>()
             val line = TestUtil.createLine(0)
             tflDatabase.linesDao().insert(line)
             tflDatabase.linesDao().getLines().observeForever(observer1)
@@ -65,7 +66,8 @@ class LinesDaoTest : DbTest() {
                 assertEquals(listOf(line), value)
             }
 
-            val observer2 = mock<Observer<List<Line>>>()
+            val observer2 =
+                mock<Observer<List<Line>>>()
             val lines = TestUtil.createLines(10)
             lines.forEach{
                 tflDatabase.linesDao().insert(it)

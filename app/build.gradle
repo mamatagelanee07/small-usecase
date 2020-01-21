@@ -3,6 +3,12 @@ apply plugin: deps.plugins.kotlin_android
 apply plugin: deps.plugins.ktx
 apply plugin: deps.plugins.kotlin
 apply plugin: deps.plugins.safeargs
+apply plugin: 'kotlin-allopen'
+
+allOpen {
+    // allows mocking for classes w/o directly opening them for release builds
+    annotation 'com.andigeeky.mvpapp.testing.OpenClass'
+}
 
 android {
     compileSdkVersion 29
@@ -12,7 +18,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.andigeeky.mvpapp.TFLTestRunner"
     }
 
     defaultConfig {
@@ -31,6 +37,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        androidTest.java.srcDirs += "src/test-common/java"
+        test.java.srcDirs += "src/test-common/java"
     }
     testOptions.unitTests.includeAndroidResources = true
 }
@@ -68,12 +78,17 @@ dependencies {
     testImplementation deps.coroutines.test
     testImplementation deps.arch_core.testing
     testImplementation deps.atsl.runner
-    testImplementation deps.atsl.rules
     testImplementation deps.atsl.ext_junit
     testImplementation deps.mock_web_server
     testImplementation deps.mockito.core
     testImplementation deps.robolectric
 
     androidTestImplementation deps.test.junitX
-    androidTestImplementation deps.test.espresso
+    androidTestImplementation deps.espresso.core
+
+    androidTestImplementation deps.mockito.core
+    androidTestImplementation deps.mockito.android
+    androidTestImplementation deps.arch_core.testing
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
 }

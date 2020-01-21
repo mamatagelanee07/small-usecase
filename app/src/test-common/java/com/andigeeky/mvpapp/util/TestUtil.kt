@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.utils.resourcepools
+package com.andigeeky.mvpapp.util
 
 import com.andigeeky.mvpapp.lines.vo.Line
 

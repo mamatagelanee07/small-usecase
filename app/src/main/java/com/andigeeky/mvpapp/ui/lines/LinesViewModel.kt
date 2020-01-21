@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModel
 import com.andigeeky.mvpapp.api.Resource
 import com.andigeeky.mvpapp.lines.repository.LinesRepository
 import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.testing.OpenForTesting
 import javax.inject.Inject
 
+@OpenForTesting
 class LinesViewModel @Inject constructor(
     private val linesRepository: LinesRepository
 ) : ViewModel() {
