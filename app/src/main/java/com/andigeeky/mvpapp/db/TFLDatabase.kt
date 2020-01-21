@@ -3,7 +3,8 @@ package com.andigeeky.mvpapp.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.lines.data.db.LinesDao
+import com.andigeeky.mvpapp.lines.data.vo.Line
 
 /**
  * TFL database for Lines

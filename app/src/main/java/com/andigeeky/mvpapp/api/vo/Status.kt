@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.api
+package com.andigeeky.mvpapp.api.vo
 
 /**
  * Status of a resource that is provided to the UI.

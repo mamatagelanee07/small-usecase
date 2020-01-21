@@ -1,11 +1,11 @@
-package com.andigeeky.mvpapp.lines.repository
+package com.andigeeky.mvpapp.lines.data.repository
 
 import androidx.lifecycle.LiveData
-import com.andigeeky.mvpapp.api.Resource
+import com.andigeeky.mvpapp.api.vo.Resource
 import com.andigeeky.mvpapp.api.TFLService
 import com.andigeeky.mvpapp.api.networkBoundResource
-import com.andigeeky.mvpapp.db.LinesDao
-import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.lines.data.db.LinesDao
+import com.andigeeky.mvpapp.lines.data.vo.Line
 import com.andigeeky.mvpapp.testing.OpenForTesting
 import javax.inject.Inject
 import javax.inject.Singleton

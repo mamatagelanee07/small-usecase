@@ -2,7 +2,7 @@ package com.andigeeky.mvpapp.utils
 
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.IdlingResource
-import com.andigeeky.mvpapp.util.CountingAppExecutors
+import com.andigeeky.mvpapp.ui.util.CountingAppExecutors
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
 import java.util.UUID

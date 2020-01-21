@@ -1,4 +1,5 @@
 package com.andigeeky.mvpapp.api
+import com.andigeeky.mvpapp.api.vo.ApiResponse
 import okhttp3.Request
 import retrofit2.*
 import java.lang.reflect.ParameterizedType

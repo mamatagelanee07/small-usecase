@@ -1,6 +1,6 @@
-package com.andigeeky.mvpapp.util
+package com.andigeeky.mvpapp.ui.util
 
-import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.lines.data.vo.Line
 
 object TestUtil {
 
@@ -16,7 +16,7 @@ object TestUtil {
         created = "created $id",
         id = "$id",
         name = "Line $id",
-        modeName = if (id %2 == 0) "tube" else "train",
+        modeName = if (id % 2 == 0) "tube" else "train",
         modified = "modified $id"
     )
 }

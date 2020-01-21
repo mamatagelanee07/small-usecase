@@ -2,7 +2,7 @@ package com.andigeeky.mvpapp.di.modules
 
 import android.app.Application
 import androidx.room.Room
-import com.andigeeky.mvpapp.db.LinesDao
+import com.andigeeky.mvpapp.lines.data.db.LinesDao
 import com.andigeeky.mvpapp.db.TFLDatabase
 import dagger.Module
 import dagger.Provides

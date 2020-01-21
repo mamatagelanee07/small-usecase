@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.ui.lines
+package com.andigeeky.mvpapp.lines.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,7 +17,7 @@ import com.andigeeky.mvpapp.di.Injectable
 import com.andigeeky.mvpapp.testing.OpenForTesting
 import com.andigeeky.mvpapp.ui.common.AppExecutors
 import com.andigeeky.mvpapp.ui.common.FragmentDataBindingComponent
-import com.andigeeky.mvpapp.util.autoCleared
+import com.andigeeky.mvpapp.ui.util.autoCleared
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -57,7 +57,10 @@ class LinesFragment : Fragment(), Injectable {
             .get(LinesViewModel::class.java)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.lines = lineStatusViewModel.getLines()
-        this.adapter = LinesAdapter(dataBindingComponent,appExecutors){
+        this.adapter = LinesAdapter(
+            dataBindingComponent,
+            appExecutors
+        ) {
             Timber.e("Clicked $it")
         }
         binding.listLines.adapter = adapter

@@ -3,9 +3,9 @@ package com.andigeeky.mvpapp.db
 import android.os.Build
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.andigeeky.mvpapp.lines.vo.Line
-import com.andigeeky.mvpapp.util.mock
-import com.andigeeky.mvpapp.util.TestUtil
+import com.andigeeky.mvpapp.lines.data.vo.Line
+import com.andigeeky.mvpapp.ui.util.mock
+import com.andigeeky.mvpapp.ui.util.TestUtil
 import junit.framework.Assert.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest

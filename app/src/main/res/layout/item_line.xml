@@ -7,7 +7,7 @@
 
         <variable
             name="line"
-            type="com.andigeeky.mvpapp.lines.vo.Line" />
+            type="com.andigeeky.mvpapp.lines.data.vo.Line" />
     </data>
 
     <androidx.cardview.widget.CardView

@@ -1,5 +1,9 @@
 package com.andigeeky.mvpapp.api
 
+import com.andigeeky.mvpapp.api.vo.ApiEmptyResponse
+import com.andigeeky.mvpapp.api.vo.ApiErrorResponse
+import com.andigeeky.mvpapp.api.vo.ApiResponse
+import com.andigeeky.mvpapp.api.vo.ApiSuccessResponse
 import okhttp3.MediaType
 import okhttp3.ResponseBody
 import org.junit.Test

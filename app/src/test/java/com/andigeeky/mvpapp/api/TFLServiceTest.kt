@@ -1,6 +1,7 @@
 package com.andigeeky.mvpapp.api
 
-import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.api.vo.ApiSuccessResponse
+import com.andigeeky.mvpapp.lines.data.vo.Line
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer

@@ -5,13 +5,13 @@
 
     <data>
 
-        <import type="com.andigeeky.mvpapp.api.Resource" />
+        <import type="com.andigeeky.mvpapp.api.vo.Resource" />
 
-        <import type="com.andigeeky.mvpapp.api.Status" />
+        <import type="com.andigeeky.mvpapp.api.vo.Status" />
 
         <variable
             name="resource"
-            type="Resource" />
+            type="com.andigeeky.mvpapp.api.vo.Resource" />
     </data>
 
     <LinearLayout

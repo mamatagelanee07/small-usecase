@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/lines"
-        android:name="com.andigeeky.mvpapp.ui.lines.LinesFragment"
+        android:name="com.andigeeky.mvpapp.lines.presentation.LinesFragment"
         tools:layout = "@layout/fragment_home"
         android:label="Home" />
 </navigation>

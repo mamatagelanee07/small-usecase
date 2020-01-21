@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.util
+package com.andigeeky.mvpapp.ui.util
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver

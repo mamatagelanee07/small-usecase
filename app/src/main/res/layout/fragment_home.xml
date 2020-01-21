@@ -5,10 +5,10 @@
 
     <data>
 
-        <import type="com.andigeeky.mvpapp.api.Status" />
-        <import type="com.andigeeky.mvpapp.api.Resource" />
+        <import type="com.andigeeky.mvpapp.api.vo.Status" />
+        <import type="com.andigeeky.mvpapp.api.vo.Resource" />
         <import type="androidx.lifecycle.LiveData"/>
-        <import type="com.andigeeky.mvpapp.lines.vo.Line"/>
+        <import type="com.andigeeky.mvpapp.lines.data.vo.Line"/>
 
         <variable
             name="lines"

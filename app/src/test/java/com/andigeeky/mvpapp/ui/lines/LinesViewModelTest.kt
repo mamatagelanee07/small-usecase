@@ -3,11 +3,12 @@ package com.andigeeky.mvpapp.ui.lines
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import com.andigeeky.mvpapp.api.Resource
-import com.andigeeky.mvpapp.lines.repository.LinesRepository
-import com.andigeeky.mvpapp.lines.vo.Line
-import com.andigeeky.mvpapp.util.mock
-import com.andigeeky.mvpapp.util.TestUtil
+import com.andigeeky.mvpapp.api.vo.Resource
+import com.andigeeky.mvpapp.lines.data.repository.LinesRepository
+import com.andigeeky.mvpapp.lines.presentation.LinesViewModel
+import com.andigeeky.mvpapp.lines.data.vo.Line
+import com.andigeeky.mvpapp.ui.util.mock
+import com.andigeeky.mvpapp.ui.util.TestUtil
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,7 +22,8 @@ class LinesViewModelTest {
     val instantExecutorRule = InstantTaskExecutorRule()
 
     private val linesRepository = mock(LinesRepository::class.java)
-    private val linesViewModel = LinesViewModel(linesRepository)
+    private val linesViewModel =
+        LinesViewModel(linesRepository)
 
     @Test
     fun `test lines live data call loadLines()`() {

@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.util
+package com.andigeeky.mvpapp.ui.util
 
 import com.andigeeky.mvpapp.ui.common.AppExecutors
 import java.util.concurrent.Executor

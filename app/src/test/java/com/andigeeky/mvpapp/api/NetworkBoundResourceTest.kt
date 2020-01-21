@@ -2,6 +2,8 @@ package com.andigeeky.mvpapp.api
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
+import com.andigeeky.mvpapp.api.vo.ApiResponse
+import com.andigeeky.mvpapp.api.vo.Resource
 import com.andigeeky.mvpapp.utils.CoroutineTestBase
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.ExperimentalCoroutinesApi

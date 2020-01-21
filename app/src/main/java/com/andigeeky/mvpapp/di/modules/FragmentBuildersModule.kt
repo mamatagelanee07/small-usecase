@@ -1,6 +1,6 @@
 package com.andigeeky.mvpapp.di.modules
 
-import com.andigeeky.mvpapp.ui.lines.LinesFragment
+import com.andigeeky.mvpapp.lines.presentation.LinesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

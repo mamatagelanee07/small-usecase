@@ -5,14 +5,15 @@ import android.os.Build
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.andigeeky.mvpapp.api.ApiResponse
-import com.andigeeky.mvpapp.api.Resource
+import com.andigeeky.mvpapp.api.vo.ApiResponse
+import com.andigeeky.mvpapp.api.vo.Resource
 import com.andigeeky.mvpapp.api.TFLService
-import com.andigeeky.mvpapp.db.LinesDao
+import com.andigeeky.mvpapp.lines.data.db.LinesDao
 import com.andigeeky.mvpapp.db.TFLDatabase
+import com.andigeeky.mvpapp.lines.data.repository.LinesRepository
 import com.andigeeky.mvpapp.utils.CoroutineTestBase
-import com.andigeeky.mvpapp.util.mock
-import com.andigeeky.mvpapp.util.TestUtil
+import com.andigeeky.mvpapp.ui.util.mock
+import com.andigeeky.mvpapp.ui.util.TestUtil
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before
@@ -43,10 +44,11 @@ class LinesRepositoryTest : CoroutineTestBase(){
             .allowMainThreadQueries()
             .build()
         linesDao = db.linesDao()
-        linesRepository = LinesRepository(
-            linesDao,
-            tflService
-        )
+        linesRepository =
+            LinesRepository(
+                linesDao,
+                tflService
+            )
     }
 
     @Test

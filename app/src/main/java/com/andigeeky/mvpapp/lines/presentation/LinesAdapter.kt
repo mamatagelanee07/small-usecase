@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.ui.lines
+package com.andigeeky.mvpapp.lines.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import com.andigeeky.mvpapp.R
 import com.andigeeky.mvpapp.databinding.ItemLineBinding
-import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.lines.data.vo.Line
 import com.andigeeky.mvpapp.ui.common.AppExecutors
 import com.andigeeky.mvpapp.ui.common.DataBoundListAdapter
 

@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.lines.vo
+package com.andigeeky.mvpapp.lines.data.vo
 import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 

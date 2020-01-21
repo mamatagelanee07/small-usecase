@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.api
+package com.andigeeky.mvpapp.api.vo
 
 import retrofit2.Response
 
@@ -10,7 +10,9 @@ import retrofit2.Response
 sealed class ApiResponse<T> {
     companion object {
         fun <T> create(error: Throwable): ApiErrorResponse<T> {
-            return ApiErrorResponse(error.message ?: "unknown error")
+            return ApiErrorResponse(
+                error.message ?: "unknown error"
+            )
         }
 
         fun <T> create(response: Response<T>): ApiResponse<T> {
@@ -30,7 +32,9 @@ sealed class ApiResponse<T> {
                 } else {
                     msg
                 }
-                ApiErrorResponse(errorMsg ?: "unknown error")
+                ApiErrorResponse(
+                    errorMsg ?: "unknown error"
+                )
             }
         }
     }

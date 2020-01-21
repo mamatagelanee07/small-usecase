@@ -1,4 +1,4 @@
-package com.andigeeky.mvpapp.api
+package com.andigeeky.mvpapp.api.vo
 
 /**
  * A generic class that holds a value with its loading status.

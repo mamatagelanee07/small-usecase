@@ -1,10 +1,10 @@
-package com.andigeeky.mvpapp.ui.lines
+package com.andigeeky.mvpapp.lines.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.andigeeky.mvpapp.api.Resource
-import com.andigeeky.mvpapp.lines.repository.LinesRepository
-import com.andigeeky.mvpapp.lines.vo.Line
+import com.andigeeky.mvpapp.api.vo.Resource
+import com.andigeeky.mvpapp.lines.data.repository.LinesRepository
+import com.andigeeky.mvpapp.lines.data.vo.Line
 import com.andigeeky.mvpapp.testing.OpenForTesting
 import javax.inject.Inject
 
